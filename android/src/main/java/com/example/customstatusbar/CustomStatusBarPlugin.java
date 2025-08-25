@@ -1,4 +1,4 @@
-package com.example.customstatusbar;
+package com.ezyger.customstatusbar;
 
 import android.os.Build;
 import android.view.View;
