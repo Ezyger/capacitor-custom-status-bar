@@ -1,3 +1,8 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
 android {
     namespace "com.ezyger.customstatusbar"
     compileSdk 35
@@ -8,8 +13,10 @@ android {
     }
 
     buildTypes {
-        debug { }
-        release { }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 
     compileOptions {
@@ -18,6 +25,11 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '21'
+        jvmTarget = "21"
     }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "com.getcapacitor:capacitor-android:5.7.4"
 }
