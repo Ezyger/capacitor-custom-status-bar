@@ -1,27 +1,27 @@
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android' version '1.9.10'
+    id 'kotlin-android' 
 }
 
 android {
-    namespace 'com.ezyger.customstatusbar'
-    compileSdk 35
+    namespace 'com.ezyger.capacitorcustomstatusbar'
+    compileSdk 34
 
     defaultConfig {
-        minSdk 23
+        minSdk 21
+        targetSdk 34
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
-    }
-
-    kotlinOptions {
-        jvmTarget = '21'
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+        }
     }
 }
 
-repositories {
-    google()
-    mavenCentral()
+dependencies {
+    implementation "androidx.core:core-ktx:1.12.0" 
 }

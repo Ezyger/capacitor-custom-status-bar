@@ -1,0 +1,11 @@
+{
+  "name": "capacitor-custom-status-bar",
+  "version": "1.0.0",
+  "description": "Plugin Capacitor para customizar a Status Bar",
+  "license": "MIT",
+  "cordova": {},
+  "npmClient": "npm",
+  "capacitor": {
+    "platforms": ["android"]
+  }
+}
