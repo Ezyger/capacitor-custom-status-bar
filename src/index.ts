@@ -1,10 +1,15 @@
-import { registerPlugin } from '@capacitor/core';
-
-export interface CustomStatusBarPlugin {
-  setColor(options: { color: string; style: 'DARK' | 'LIGHT' }): Promise<void>;
-  setTransparent(): Promise<void>;
+export interface StatusBarOptions {
+  color?: string;
+  style?: string;
 }
 
-const CustomStatusBar = registerPlugin<CustomStatusBarPlugin>('CustomStatusBar');
+const CustomStatusBar = {
+  setColor: async (opts: StatusBarOptions) => {
+    return (window as any).Capacitor.Plugins.CustomStatusBar.setColor(opts);
+  },
+  setTransparent: async () => {
+    return (window as any).Capacitor.Plugins.CustomStatusBar.setTransparent();
+  }
+};
 
 export default CustomStatusBar;

@@ -1,5 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@capacitor/core");
-const CustomStatusBar = (0, core_1.registerPlugin)('CustomStatusBar');
+const CustomStatusBar = {
+    setColor: async (opts) => {
+        return window.Capacitor.Plugins.CustomStatusBar.setColor(opts);
+    },
+    setTransparent: async () => {
+        return window.Capacitor.Plugins.CustomStatusBar.setTransparent();
+    }
+};
 exports.default = CustomStatusBar;
