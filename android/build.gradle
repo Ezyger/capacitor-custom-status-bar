@@ -1,5 +1,9 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
 android {
-    namespace 'com.ezyger.capacitorcustomstatusbar'
     compileSdk 35
 
     defaultConfig {
@@ -7,21 +11,8 @@ android {
         targetSdk 35
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
-    }
-
-    kotlinOptions {
-        jvmTarget = '21'
-    }
-
-    libraryVariants.all { variant ->
-        variant.outputs.all {
-            def variantName = variant.name
-            artifacts.add("archives", variant.outputFile) {
-                builtBy variant.assemble
-            }
-        }
+    buildTypes {
+        debug { }
+        release { }
     }
 }
