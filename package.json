@@ -1,21 +1,9 @@
 {
   "name": "capacitor-custom-status-bar",
   "version": "1.0.0",
-  "description": "Custom StatusBar plugin for Capacitor",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
+  "main": "dist/esm/index.js",
   "capacitor": {
-    "android": {
-      "src": "android"
-    }
-  },
-  "dependencies": {
-    "@capacitor/core": "^6.1.2"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.0"
+    "id": "com.ezyger.customstatusbar",
+    "androidPackage": "com.ezyger.customstatusbar"
   }
 }
